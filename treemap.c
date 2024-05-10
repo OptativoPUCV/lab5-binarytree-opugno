@@ -145,6 +145,12 @@ void removeNode(TreeMap * tree, TreeNode* node)
             }
         }
     }
+    //CASO CON DOS HIJOS
+    else
+    {
+        TreeNode* minimu = mininum(node -> right);
+        
+    }
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
