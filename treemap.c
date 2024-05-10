@@ -148,8 +148,10 @@ void removeNode(TreeMap * tree, TreeNode* node)
     //CASO CON DOS HIJOS
     else
     {
-        TreeNode* minimu = mininum(node -> right);
-        
+        TreeNode *minimo = minimum(node -> right);  //obtener el minimo del subarbol derecho
+        node -> pair  -> key = minimo -> pair -> key;   //actualizar y cambiar los datos
+        node -> pair -> value = minimo-> pair -> value;
+        removeNode(tree, minimo);                      //eliminar el nodo
     }
 }
 
