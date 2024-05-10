@@ -111,9 +111,21 @@ void removeNode(TreeMap * tree, TreeNode* node)
             else node -> parent -> right = NULL;
         }
     }
-
     //CASO CON UN HIJO
-    else if 
+    else if (node -> left == NULL || node -> right == NULL)
+    {
+        if (node -> parent != NULL)
+        { 
+            //es nulo a la izquierda, solo tiene un hijo a la derecha
+            if (node -> left == NULL && node -> right != NULL)
+            {
+                if (node == node -> parent -> left)
+                {
+                    node -> parent -> left = node -> left;
+                }
+            }
+        }
+    }
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
