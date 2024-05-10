@@ -99,8 +99,21 @@ TreeNode * minimum(TreeNode * x)
 }
 
 
-void removeNode(TreeMap * tree, TreeNode* node) {
+void removeNode(TreeMap * tree, TreeNode* node) 
+{
+    //CASO SIN HIJOS
+    if (node -> left == NULL && node -> right == NULL)
+    {
+        //cuando no es la raiz
+        if (node -> parent != NULL) 
+        {
+            if (node == node -> parent -> left) node -> parent -> left = NULL;
+            else node -> parent -> right = NULL;
+        }
+    }
 
+    //CASO CON UN HIJO
+    else if 
 }
 
 void eraseTreeMap(TreeMap * tree, void* key){
