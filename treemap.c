@@ -197,6 +197,25 @@ Pair * firstTreeMap(TreeMap * tree)
     return minimo;
 }
 
-Pair * nextTreeMap(TreeMap * tree) {
+Pair * nextTreeMap(TreeMap * tree) 
+{
+    TreeNode* aux = tree -> current;
+
+    if (tree == NULL)
+    {
+        return NULL;
+    }
+        
+    if (aux -> right != NULL)
+    {
+        aux = minimum(tree -> current -> right);
+        tree -> current = aux;
+        return aux -> pair;
+    }
+    else 
+    {
+        
+    }
+    
     return NULL;
 }
