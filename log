@@ -116,3 +116,20 @@ treemap.c:191:12: error: returning ‘TreeNode *’ from a function with incompa
 cc1: all warnings being treated as errors
 Compilation failed
 c535902
+Sat 11 May 2024 10:19:56 PM UTC: 
+ treemap.c | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘firstTreeMap’:
+treemap.c:194:20: error: assignment to ‘Pair *’ from incompatible pointer type ‘TreeNode *’ [-Werror=incompatible-pointer-types]
+  194 |             minimo = minimum(node);
+      |                    ^
+treemap.c:190:11: error: variable ‘minimo’ set but not used [-Werror=unused-but-set-variable]
+  190 |     Pair* minimo = NULL;
+      |           ^~~~~~
+treemap.c:196:1: error: control reaches end of non-void function [-Werror=return-type]
+  196 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+1e4fca9
