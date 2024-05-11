@@ -190,9 +190,11 @@ Pair * firstTreeMap(TreeMap * tree)
     Pair* minimo = NULL;
     
     while (node != NULL)
-        {
-            minimo = minimum(node);
-        }
+    {
+        minimo = node -> pair;
+        node = node -> left;
+    }
+    return minimo;
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
