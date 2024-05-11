@@ -187,14 +187,14 @@ Pair * upperBound(TreeMap * tree, void* key)
 
     while (node != NULL)
     {
-        if (tree -> lower_than(node -> pair -> key, key) == 1)
-        {
-            node = node -> right;
-        }
-        else
+        if (tree -> lower_than(node -> pair -> key, key) == 0)
         {
             auxMa = node -> pair;
             node = node -> left;
+        }
+        else
+        {
+            node = node -> right;
         }
     }
     return auxMa;
