@@ -214,7 +214,15 @@ Pair * nextTreeMap(TreeMap * tree)
     }
     else 
     {
-        
+        while (aux -> parent != NULL)
+        {
+            if (tree -> lower_than(tree -> current -> pair -> key, aux -> parent -> pair -> key) == 1)
+            {
+                tree -> current = aux -> parent;
+                return aux -> pair;
+            }
+            else if ()
+        }
     }
     
     return NULL;

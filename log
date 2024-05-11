@@ -145,3 +145,13 @@ Sat 11 May 2024 10:39:28 PM UTC:
  tests:  22|2
 total_score: 50/70
 eb60f40
+Sat 11 May 2024 10:49:04 PM UTC: 
+ treemap.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:224:22: error: expected expression before ‘)’ token
+  224 |             else if ()
+      |                      ^
+Compilation failed
+1008602
